@@ -1,10 +1,12 @@
 <?
-/*Умножение двух чисел без использования умножения*/
-function sum($a, $b){
-				return $a/(1/$b);
+
+/* Умножение двух чисел без использования умножения */
+
+function	sum($a,	$b)	{
+				return	$a	/	(1	/	$b);
 }
 
-/*Уведомление при регистрации нового пользователя*/
+/* Уведомление при регистрации нового пользователя */
 $eventManager	=	\Bitrix\Main\EventManager::getInstance();
 $eventManager->addEventHandler('main',	'OnAfterUserAdd',	function($arFields)	{
 				$arEventFields	=	[];
