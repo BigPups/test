@@ -9,8 +9,8 @@ function sum($a, $b) {
 $eventManager = \Bitrix\Main\EventManager::getInstance();
 $eventManager->addEventHandler('main',	'OnAfterUserAdd',	function($arFields)	{
   $arEventFields = [];
-  $arEventFields["USER_LOGIN"]	=	$arFields["LOGIN"];
-  $arEventFields["REGISTER_DATE"]	=	date("d.m.Y H:i:s");
-  CEvent::SendImmediate("USER_REGISTER",	"s1",	$arEventFields);
+  $arEventFields["USER_LOGIN"] = $arFields["LOGIN"];
+  $arEventFields["REGISTER_DATE"] = date("d.m.Y H:i:s");
+  CEvent::SendImmediate("USER_REGISTER", "s1", $arEventFields);
 });
 
